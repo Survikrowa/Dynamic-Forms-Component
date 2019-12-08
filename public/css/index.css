@@ -3,13 +3,10 @@
   --main-bg-color: #1e1e25;
   --form-background-color: #27293d;
   --form-input-main-border-color: #2a324e;
-  --form-input-focus-color: #fb00ff;
+  --c-pink: #fb00ff;
   --form-input-focus-bg-color: #1d253b;
-  --button-main-color: gray;
-  --button-blue-color: #305cf4;
-  --button-pink-color: #d54fd7;
+  --c-blue: #305cf4;
   /* Borders */
-  --basic-border-size: 1px;
   --form-border-radius: 12px;
   --form-input-radius: 16px;
   --button-border-radius: 10px;
@@ -33,7 +30,7 @@ body {
 
 .form {
   background: var(--form-background-color);
-  min-height: 80vh;
+  min-height: 640px;
   padding: 8px;
   border-radius: var(--form-border-radius);
 }
@@ -49,14 +46,14 @@ body {
 
 .form__input {
   background: none;
-  border: var(--form-input-main-border-color) solid var(--basic-border-size);
+  border: var(--form-input-main-border-color) solid;
   border-radius: var(--form-input-radius);
   padding: 16px;
   color: white;
 }
 
 .form__input:focus {
-  border-color: var(--form-input-focus-color);
+  border-color: var(--c-pink);
   background: var(--form-input-focus-bg-color);
   outline: none;
 }
@@ -75,7 +72,6 @@ body {
   max-width: 150px;
   border-radius: var(--button-border-radius);
   color: white;
-  border: var(--basic-border-size) solid var(--button-main-color);
 }
 
 .btn__field {
@@ -85,34 +81,43 @@ body {
   cursor: pointer;
 }
 
-.btn-blue {
-  background: var(--button-blue-color);
+.btn__add {
+  background: var(--c-blue);
 }
 
-.btn-pink {
-  background: var(--button-pink-color);
+.btn__submit {
+  background: var(--c-pink);
 }
 
-.btn-pink-position-controller {
+.btn__submit-position {
   display: flex;
   justify-content: flex-end;
 }
 
-.btn-wrapper {
+.btn--wrapper {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 50vh;
+  height: 40%;
 }
 
-@media (min-width: 1025px) {
-  .form {
-    padding: 24px 40px;
-  }
+.img--size {
+  height: 30px;
+  width: 30px;
 }
 
 @media (min-width: 768px) {
   .form {
     width: 60%;
+    min-height: 800px;
+  }
+  .btn--wrapper {
+    height: 50%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .form {
+    padding: 24px 40px;
   }
 }
