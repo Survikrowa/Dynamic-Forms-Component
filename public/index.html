@@ -14,27 +14,16 @@
   <body>
     <div class="wrapper">
       <form class="form" id="js-form">
-        <div class="form__field">
-          <label class="form__label">Haslo 1</label>
-          <input type="text" class="form__input" />
-        </div>
-        <div class="form__wrapper">
+        <div class="fields_wrapper" id="js-fields-wrapper">
           <div class="form__field">
-            <label class="form__label">Haslo 2</label>
-            <input type="text" class="form__input" />
+            <label class="form__label">Haslo 1</label>
+            <input
+              type="text"
+              class="form__input"
+              id="js-input"
+              data-index="1"
+            />
           </div>
-          <button type="button" class="btn__field">
-            <img src="css/icon/close.svg" class="img--size" />
-          </button>
-        </div>
-        <div class="form__wrapper">
-          <div class="form__field">
-            <label class="form__label">Haslo 3</label>
-            <input type="text" class="form__input" />
-          </div>
-          <button type="button" class="btn__field ">
-            <img src="css/icon/close.svg" height="30" width="30" />
-          </button>
         </div>
         <div class="btn--wrapper">
           <button type="button" class="btn btn__add" id="js-button-add">

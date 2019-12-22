@@ -32,6 +32,7 @@ body {
   background: var(--form-background-color);
   min-height: 640px;
   padding: 8px;
+  height: 100%;
   border-radius: var(--form-border-radius);
 }
 
@@ -72,6 +73,7 @@ body {
   max-width: 150px;
   border-radius: var(--button-border-radius);
   color: white;
+  border: 0;
 }
 
 .btn__field {
