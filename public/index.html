@@ -15,13 +15,14 @@
     <div class="wrapper">
       <form class="form" id="js-form">
         <div class="fields_wrapper" id="js-fields-wrapper">
-          <div class="form__field">
+          <div class="form__field" data-role="formField">
             <label class="form__label">Haslo 1</label>
             <input
               type="text"
               class="form__input"
-              id="js-input"
-              data-index="1"
+              data-role="input"
+              data-index="0"
+              value="test value"
             />
           </div>
         </div>
@@ -30,11 +31,13 @@
             Dodaj
           </button>
           <div class="btn__submit-position">
-            <button class="btn btn__submit">ZAPISZ</button>
+            <button class="btn btn__submit" data-role="submitButton">
+              ZAPISZ
+            </button>
           </div>
         </div>
       </form>
     </div>
-    <script src="js/index.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>
