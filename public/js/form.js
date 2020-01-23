@@ -5,7 +5,7 @@ const addBtn = document.querySelector("#js-button-add");
 const submitBtn = document.querySelector('[data-role="submitButton"]');
 const formWrapper = mainForm.querySelector("#js-fields-wrapper");
 
-const MAX_INPUT_COUNT = 4;
+const MAX_INPUT_COUNT = 5;
 
 const getFormField = () => {
   return mainForm.querySelectorAll('[data-role="formField"]');
@@ -91,15 +91,13 @@ const deleteBtn = allInputs => {
 const addBtnHandler = inputsNumber => {
   const allInputs = getAllInputs();
   inputValidation(allInputs);
-  const isNumberOfInputsCorrect = canAdd(inputsNumber, MAX_INPUT_COUNT);
+
   if (areInputsCorrect(allInputs)) {
     formWrapper.insertAdjacentHTML("beforeend", renderInput(inputsNumber));
     deleteErrors();
     deleteBtn(inputsNumber);
-    console.log(isNumberOfInputsCorrect);
-    if (isNumberOfInputsCorrect) {
-      addEventListenersToInputs();
-    }
+
+    addEventListenersToInputs();
   }
 };
 
@@ -118,7 +116,11 @@ const submitBtnHandler = () => {
 
 addBtn.addEventListener("click", () => {
   const numberOfInputs = getNumberOfInputs();
-  addBtnHandler(numberOfInputs);
+  if (canAdd(numberOfInputs, MAX_INPUT_COUNT)) {
+    addBtnHandler(numberOfInputs);
+  } else {
+    addBtn.disabled = true;
+  }
   const currentElement = formWrapper.lastElementChild;
   currentElement.querySelector(".form__input").focus();
 });
