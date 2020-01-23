@@ -29,6 +29,7 @@ const inputValidation = allInputs => {
   getEmptyInputs.forEach(emptyInput => {
     emptyInput.parentNode.insertAdjacentHTML("beforeend", errorMessage);
     addBtn.disabled = true;
+    submitBtn.disabled = true;
   });
 };
 const areInputsCorrect = inputs => {
@@ -59,6 +60,7 @@ const addEventListenersToInputs = () => {
   allInputs.forEach(inputs => {
     inputs.addEventListener("input", () => {
       addBtn.disabled = false;
+      submitBtn.disabled = false;
       deleteErrors();
     });
   });
@@ -94,7 +96,8 @@ const addBtnHandler = inputsNumber => {
     formWrapper.insertAdjacentHTML("beforeend", renderInput(inputsNumber));
     deleteErrors();
     deleteBtn(inputsNumber);
-    if (isNumberOfInputsCorrect === true) {
+    console.log(isNumberOfInputsCorrect);
+    if (isNumberOfInputsCorrect) {
       addEventListenersToInputs();
     }
   }
