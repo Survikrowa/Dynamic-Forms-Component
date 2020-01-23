@@ -39,6 +39,7 @@ body {
 .form__wrapper {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .form__label {
