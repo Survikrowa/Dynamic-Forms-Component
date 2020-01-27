@@ -32,6 +32,7 @@ body {
   background: var(--form-background-color);
   min-height: 640px;
   padding: 8px;
+  height: 100%;
   border-radius: var(--form-border-radius);
 }
 
@@ -72,13 +73,33 @@ body {
   max-width: 150px;
   border-radius: var(--button-border-radius);
   color: white;
+  border: 0;
 }
 
 .btn__field {
+  width: 60px;
+  height: 60px;
+  position: relative;
   background: none;
   border: none;
-  padding: 16px;
   cursor: pointer;
+  margin-top: 5px;
+}
+
+.btn__field:after {
+  content: "";
+  height: 40px;
+  border-left: 2px solid #fff;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.btn__field:before {
+  content: "";
+  height: 40px;
+  border-left: 2px solid #fff;
+  position: absolute;
+  transform: rotate(-45deg);
 }
 
 .btn__add {

@@ -14,38 +14,30 @@
   <body>
     <div class="wrapper">
       <form class="form" id="js-form">
-        <div class="form__field">
-          <label class="form__label">Haslo 1</label>
-          <input type="text" class="form__input" />
-        </div>
-        <div class="form__wrapper">
-          <div class="form__field">
-            <label class="form__label">Haslo 2</label>
-            <input type="text" class="form__input" />
+        <div class="fields_wrapper" id="js-fields-wrapper">
+          <div class="form__field" data-role="formField">
+            <label class="form__label">Haslo 1</label>
+            <input
+              type="text"
+              class="form__input"
+              data-role="input"
+              data-index="0"
+              value="test value"
+            />
           </div>
-          <button type="button" class="btn__field">
-            <img src="css/icon/close.svg" class="img--size" />
-          </button>
-        </div>
-        <div class="form__wrapper">
-          <div class="form__field">
-            <label class="form__label">Haslo 3</label>
-            <input type="text" class="form__input" />
-          </div>
-          <button type="button" class="btn__field ">
-            <img src="css/icon/close.svg" height="30" width="30" />
-          </button>
         </div>
         <div class="btn--wrapper">
           <button type="button" class="btn btn__add" id="js-button-add">
             Dodaj
           </button>
           <div class="btn__submit-position">
-            <button class="btn btn__submit">ZAPISZ</button>
+            <button class="btn btn__submit" data-role="submitButton">
+              ZAPISZ
+            </button>
           </div>
         </div>
       </form>
     </div>
-    <script src="js/index.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>
