@@ -7,7 +7,6 @@ export const renderInput = dataIndex => {
       1} />
   </div>
   <button type="button" class="btn__field" data-role="deleteBtn">
-    <img src="/close.a5d26944.svg" class="img--size" />
   </button>
   </div>`;
 };
